@@ -1,3 +1,5 @@
+const displayResult = document.getElementById('result');
+
 // Definisco l'array di oggetti
 const byciles = [
     {
@@ -32,7 +34,8 @@ function weightComparison (){
             lightest = byciles[i];
         }
     }
-    console.log(`la bici piu leggera è "${lightest.nome}" con un peso di ${lightest.peso} kg`);
+    const result = `la bici piu leggera è "${lightest.nome}" con un peso di ${lightest.peso} kg`;
+    displayResult.textContent = result;
 };
 
 weightComparison();
