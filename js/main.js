@@ -17,3 +17,22 @@ const byciles = [
         peso: 8.74,
     }
 ];
+
+// definisco la prima bici come la più leggera per avere un confronto iniziale
+let lightest = byciles[0];
+
+const bycileslength = byciles.length;
+
+/******** 
+FUNZIONE
+********/
+function weightComparison (){
+    for (let i = 1; i < bycileslength; i++){
+        if (byciles[i].peso < lightest.peso){
+            lightest = byciles[i];
+        }
+    }
+    console.log(`la bici piu leggera è "${lightest.nome}" con un peso di ${lightest.peso} kg`);
+};
+
+weightComparison();
