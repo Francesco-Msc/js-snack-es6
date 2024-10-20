@@ -25,3 +25,16 @@ const teams = [
         recivedFouls: 0
     },
 ];
+
+/*******
+FUNZIONI
+*******/
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+// ciclo per cui ogni team ottiene un numero random nei campi del punteggio e falli ricevuti
+teams.forEach(team => {
+    team.scores = getRndInteger(1, 10);
+    team.recivedFouls = getRndInteger(1, 10);
+});
